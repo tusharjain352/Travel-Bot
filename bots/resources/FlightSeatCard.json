@@ -1,0 +1,138 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "A"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "B"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "C"
+                        }
+                    ],
+                    "width": "auto"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "1"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "1"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "1"
+                        }
+                    ],
+                    "width": "auto"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "2"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "2"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "2"
+                        }
+                    ],
+                    "width": "auto"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "3"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "3"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "3"
+                        }
+                    ],
+                    "width": "auto"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "4"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "4"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "4"
+                        }
+                    ],
+                    "width": "auto"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "5"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "5"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "5"
+                        }
+                    ],
+                    "width": "auto"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "6"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "6"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "6"
+                        }
+                    ],
+                    "width": "auto"
+                }
+            ]
+        }
+    ]
+}
