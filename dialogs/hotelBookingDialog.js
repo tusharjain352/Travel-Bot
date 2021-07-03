@@ -46,7 +46,7 @@ class HotelBookingDialog extends CancelAndHelpDialog
             if ( remainingTime < 20 )
             {
                 const messageText = `Do you want to book room for : ${ global.bookingDetails.destination } ?`;
-                const msg = MessageFactory.text( messageText, messageText, InputHints.ExpectingInput );
+                const msg = MessageFactory.text( messageText, messageText );
 
                 // Offer a YES/NO prompt.
                 return await stepContext.prompt( CONFIRM_PROMPT, { prompt: msg } );

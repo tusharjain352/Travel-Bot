@@ -21,15 +21,15 @@ class DialogBot extends ActivityHandler {
         this.dialog = dialog;
         this.dialogState = this.conversationState.createProperty('DialogState');
 
-        this.onMessage(async (context, next) => {
-            console.log('Running dialog with Message Activity.');
+        // this.onMessage(async (context, next) => {
+        //     console.log('Running dialog with Message Activity.',context.text);
 
-            // Run the Dialog with the new message Activity.
-            await this.dialog.run(context, this.dialogState);
+        //     // Run the Dialog with the new message Activity.
+        //     await this.dialog.run(context, this.dialogState);
 
-            // By calling next() you ensure that the next BotHandler is run.
-            await next();
-        });
+        //     // By calling next() you ensure that the next BotHandler is run.
+        //     await next();
+        // });
     }
 
     /**

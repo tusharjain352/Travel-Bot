@@ -64,14 +64,14 @@ class MainDialog extends ComponentDialog {
         }
         const bookingDetails = {};
 
-        if (!this.luisRecognizer.isConfigured) {
-            // LUIS is not configured, we just run the BookingDialog path.
-            return await stepContext.beginDialog('bookingDialog', bookingDetails);
-        }
+        // if (!this.luisRecognizer.isConfigured) {
+        //     // LUIS is not configured, we just run the BookingDialog path.
+        //     return await stepContext.beginDialog('bookingDialog', bookingDetails);
+        // }
 
         // Call LUIS and gather any potential booking details. (Note the TurnContext has the response to the prompt)
         const luisResult = await this.luisRecognizer.executeLuisQuery(stepContext.context);
-        console.log(LuisRecognizer.topIntent(luisResult))
+        console.log('luisResult',LuisRecognizer.topIntent(luisResult))
         switch (LuisRecognizer.topIntent(luisResult)) {
             case 'book_flight': {
                 const entities = this.luisRecognizer.getFromEntities(luisResult);

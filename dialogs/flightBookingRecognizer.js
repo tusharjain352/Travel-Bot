@@ -38,17 +38,17 @@ class FlightBookingRecognizer {
         return { flightOrigin, flightDestination };
     }
 
-    getToEntities(result) {
-        let flightDestination, flightOrigin;
-        if (result.entities.$instance.flightDestination) {
-            flightDestination = result.entities.$instance.flightDestination[0].text;
-        }
-        if (flightDestination && result.entities.flightOrigin[0]) {
-            flightOrigin = result.entities.flightOrigin[0];
-        }
+    // getToEntities(result) {
+    //     let flightDestination, flightOrigin;
+    //     if (result.entities.$instance.flightDestination) {
+    //         flightDestination = result.entities.$instance.flightDestination[0].text;
+    //     }
+    //     if (flightDestination && result.entities.flightOrigin[0]) {
+    //         flightOrigin = result.entities.flightOrigin[0];
+    //     }
 
-        return { flightDestination, flightOrigin };
-    }
+    //     return { flightDestination, flightOrigin };
+    // }
 
     /**
      * This value will be a TIMEX. And we are only interested in a Date so grab the first result and drop the Time part.

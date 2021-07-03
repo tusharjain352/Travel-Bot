@@ -51,11 +51,11 @@ class DateResolverDialog extends ComponentDialog {
             const dateStatus = await this.checkTodayDate(step.result[0].value);
             if (dateStatus) {
                 const noSlotMessage = `No flights are available for today. Quick Suggestions`;
-                return await step.prompt(CHOICE_PROMPT, noSlotMessage, ['Change Date', 'Change Destination', 'Start Over']);
+                return await step.prompt(CHOICE_PROMPT, noSlotMessage, ['Change Date', 'Change Destination', 'Start_Over']);
             } else {
                 // step.values.date = step.result
                 global.bookingDetails['travelDate'] = step.result;
-                return await step.prompt(CHOICE_PROMPT, 'Which class you want to travel?', ['Economy', 'Business', 'Change Destination', 'Start Over']);
+                return await step.prompt(CHOICE_PROMPT, 'Which class you want to travel?', ['Economy', 'Business', 'Change Destination', 'Start_Over']);
             }
         }
     }
@@ -72,11 +72,11 @@ class DateResolverDialog extends ComponentDialog {
                     global.bookingDetails.travelDate = null;
                     return await step.replaceDialog(DEST_DIALOG, { bookingDetails:global.bookingDetails });
                 }
-                case 'Start Over': {
+                case 'Start_Over': {
                     // endDialog = true;
                     // await step.cancelAllDialogs();
-
-                    return await step.replaceDialog(WELCOME_DIALOG, { bookingDetails });
+                    await step.endDialog();
+                    //return await step.replaceDialog(WELCOME_DIALOG, { bookingDetails });
                 }
                 case 'Economy':
                 case 'Business': {
